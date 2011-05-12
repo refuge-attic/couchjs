@@ -1,0 +1,11 @@
+CouchDB javascript handler.
+
+Based on couchjs from Apache CouchDB project (http://couchdb.apache.org)
+
+Features:
+- user rebar
+- spidermonkey 0.8.5
+- statically linked
+
+Note: http support have been removed.
+
