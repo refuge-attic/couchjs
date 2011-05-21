@@ -41,7 +41,8 @@ all: ${LIB_DIR}/libjs_static.a
 ${LIB_DIR}/libjs_static.a: ${LIB_DIR}/libnspr4.a
 	${GUNZIP} -c js${SMONKEY_PKGVER}.tar.gz | ${TAR} xf -
 	(cd ${JS_DIR}/js/src && \
-	 patch -p0 -i ${.CURDIR}/patches/patch-jsprf.cpp && \
+	 patch -p0 -i ${.CURDIR}/patches/patch-jsprf_cpp && \
+	 patch -p0 -i ${.CURDIR}/patches/patch-configure && \
 	 CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" \
 	 CPPFLAGS="-DXP_UNIX -DJS_C_STRINGS_ARE_UTF8" \
 	 ./configure --prefix=${SYSTEM_DIR} \
