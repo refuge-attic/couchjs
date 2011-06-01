@@ -18,4 +18,4 @@ c_src/*.gz
 c_src/system
 c_src/js*
 c_src/nsprpub
-
+main-coffee.js
